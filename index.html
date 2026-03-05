@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dion example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+  <header class="hero-section">
+    <div class="text-center">
+      <h1>Isle of Wight Council</h1>
+      <p class="lead">Serving the people of Isle of Wight</p>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">IOW Project</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynav">
+        <ul class="navbar-nav ms-auto">
+          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="page1.html">Image Map</a></li>
+          <li><a class="nav-link" href="page2.html">Google KMZ</a></li>
+          <li><a class="nav-link" href="page3.html">Enterprise</a></li>
+          <li><a class="nav-link" href="page4.html">Open Source</a></li>
+          <li><a class="nav-link" href="page5.html">ArcGIS Online App</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row g-4">
+      
+      <aside class="col-lg-3">
+        <div class="sidebar-card">
+          <h3>Welcome</h3>
+          <img src="image/logo.jpeg" class="fakeimg" alt="logo">
+        </div>
+
+        <div class="sidebar-card-data-toggler">
+          <h3>Map Layers</h3>
+          <p class="sidebar-subtext">Click the checkbox to display the map layer</p>
+          
+          <div id="layer-control-group" class="layer-control-group">
+            <label class="layer-checkbox">
+              <input type="checkbox" value="iow_town">
+              <span class="checkmark"></span>
+              <span class="label-text">Town Population</span>
+            </label>
+
+            <label class="layer-checkbox">
+              <input type="checkbox" value="iow_outline">
+              <span class="checkmark"></span>
+              <span class="label-text">Island Outline</span>
+            </label>
+
+            <label class="layer-checkbox">
+              <input type="checkbox" value="iow_5kgrid_rain">
+              <span class="checkmark"></span>
+              <span class="label-text">Rainfall</span>
+            </label>
+
+            <label class="layer-checkbox">
+              <input type="checkbox" value="iow_roads">
+              <span class="checkmark"></span>
+              <span class="label-text">Road</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <main class="col-lg-9">
+        <section class="map-container">
+          <h5 class="map-title">About</h5>
+          <div class="mt-3 narrative">
+            <p>"This website demonstrates how modern web-based GIS technologies can be used to present clear, 
+              accessible and engaging geographic information for the Isle of Wight. By combining interactive maps, 
+              open-source tools and enterprise GIS platforms, it illustrates how spatial data can be effectively 
+              shared with the public to support transparency, understanding and informed decision-making"</p>
+          </div>
+        </section>
+
+        <section class="map-container">
+          <h5 class="map-title">Leaflet</h5>
+          <div id="map-leaflet" class="map-box"></div>
+        </section>
+
+
+        <section class="map-container">
+          <h5 class="map-title">Video</h5>
+          <div class="mt-3">
+          <video controls class="video-box">
+            <source src="video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        </section>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Dion GIS Projects. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/home/layer-manager.js"></script>
+  <script src="js/home/map-leaflet.js"></script>
+  <script src="js/home/data-toggler.js"></script>
+  
+</body>
+</html>
